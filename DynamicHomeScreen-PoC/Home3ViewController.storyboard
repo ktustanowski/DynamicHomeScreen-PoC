@@ -28,6 +28,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="settingsButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="gVj-qT-2ZH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzR-7c-Vud">
                                 <rect key="frame" x="16" y="104" width="343" height="30"/>
@@ -35,6 +38,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Long"/>
+                                <connections>
+                                    <action selector="longButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="G0u-Ng-7pK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-OJ-msE">
                                 <rect key="frame" x="16" y="66" width="343" height="30"/>
@@ -42,6 +48,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Short"/>
+                                <connections>
+                                    <action selector="shortButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="osZ-ir-bnN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-Td-qUJ">
                                 <rect key="frame" x="16" y="142" width="343" height="30"/>
@@ -49,6 +58,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Stream"/>
+                                <connections>
+                                    <action selector="streamButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="T50-Kj-FuZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

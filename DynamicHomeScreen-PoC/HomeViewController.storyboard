@@ -25,14 +25,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-Wu-pFS">
                                 <rect key="frame" x="16" y="20" width="101" height="30"/>
                                 <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="settingsButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="9dH-QY-XKF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzR-7c-Vud">
                                 <rect key="frame" x="258" y="20" width="101" height="30"/>
                                 <state key="normal" title="Long"/>
+                                <connections>
+                                    <action selector="longButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="DU7-YI-JQX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-OJ-msE">
                                 <rect key="frame" x="137" y="20" width="101" height="30"/>
                                 <state key="normal" title="Short"/>
+                                <connections>
+                                    <action selector="shortButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="bfb-ev-1ya"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>

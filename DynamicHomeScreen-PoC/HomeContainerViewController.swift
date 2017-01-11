@@ -13,18 +13,36 @@ class HomeContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addHomeViewController()
+        embedHomeViewController()
     }
     
-    func addHomeViewController() {
+    func embedHomeViewController() {
         guard
-            let homeViewController = HomeFactory.create(withStyle: SettingsProvider.homeStyle)
+            let viewController = HomeFactory.create(withStyle: SettingsProvider.homeStyle)
             else { return }
         
-        addChildViewController(homeViewController)
-        homeViewController.view.frame = view.frame
-        view.addSubview(homeViewController.view)
-        homeViewController.didMove(toParentViewController: self)
+        addChildViewController(viewController)
+        viewController.view.frame = view.frame
+        view.addSubview(viewController.view)
+        viewController.didMove(toParentViewController: self)
+        
+        if let homeViewController = viewController as? HomeActions {
+            homeViewController.settingsSelected = { [weak self] in
+                self?.performSegue(withIdentifier: "HomeToSettings", sender: self)
+            }
+
+            homeViewController.longSelected = { [weak self] _ in
+                self?.performSegue(withIdentifier: "HomeToLong", sender: self)
+            }
+
+            homeViewController.shortSelected = { [weak self] _ in
+                self?.performSegue(withIdentifier: "HomeToShort", sender: self)
+            }
+
+            homeViewController.streamSelected = { [weak self] _ in
+                self?.performSegue(withIdentifier: "HomeToStream", sender: self)
+            }
+        }
     }
     
 }

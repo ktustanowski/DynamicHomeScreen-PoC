@@ -8,7 +8,14 @@
 
 import UIKit
 
-class Home3ViewController: UIViewController {
+class Home3ViewController: UIViewController, HomeActions {
+    
+    var longSelected: ((_ id: String)->())?
+    var shortSelected: ((_ id: String)->())?
+    var streamSelected: ((_ id: String)->())?
+    var settingsSelected: (()->())?
+
+    var test: (()->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +23,20 @@ class Home3ViewController: UIViewController {
         parent?.title = "Home 3"
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func settingsButtonTapped() {
+        settingsSelected?()
     }
-    
+
+    @IBAction func shortButtonTapped() {
+        shortSelected?("1")
+    }
+
+    @IBAction func longButtonTapped() {
+        longSelected?("1")
+    }
+
+    @IBAction func streamButtonTapped() {
+        streamSelected?("1")
+    }
+
 }
