@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97P-Y4-juW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2612" y="-493"/>
+            <point key="canvasLocation" x="-1202" y="-188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dEh-n0-KAJ">
@@ -59,12 +59,22 @@
                                     <segue destination="ivw-KD-Ctk" kind="show" id="LnF-Ip-I3a"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnw-kX-lao">
+                                <rect key="frame" x="16" y="110" width="343" height="30"/>
+                                <state key="normal" title="Stream"/>
+                                <connections>
+                                    <segue destination="fQR-Jq-JOF" kind="show" id="i8I-HY-LRi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4ks-sJ-Kqv" firstAttribute="baseline" secondItem="LNa-ut-vhh" secondAttribute="baseline" id="6pu-by-iXE"/>
+                            <constraint firstItem="fnw-kX-lao" firstAttribute="trailing" secondItem="LNa-ut-vhh" secondAttribute="trailing" id="9Oc-5l-DNk"/>
+                            <constraint firstItem="fnw-kX-lao" firstAttribute="leading" secondItem="na7-5Z-Dg4" secondAttribute="leading" id="E2Z-04-BWx"/>
                             <constraint firstItem="4ks-sJ-Kqv" firstAttribute="width" secondItem="na7-5Z-Dg4" secondAttribute="width" id="GNY-Ve-DUm"/>
                             <constraint firstItem="na7-5Z-Dg4" firstAttribute="top" secondItem="TpU-mU-yrk" secondAttribute="bottom" constant="8" symbolic="YES" id="MsE-8M-Yq9"/>
+                            <constraint firstItem="fnw-kX-lao" firstAttribute="top" secondItem="na7-5Z-Dg4" secondAttribute="bottom" constant="8" symbolic="YES" id="Ow2-5a-8sw"/>
                             <constraint firstItem="na7-5Z-Dg4" firstAttribute="leading" secondItem="1vn-q7-vfO" secondAttribute="leadingMargin" id="Wgd-J2-YKK"/>
                             <constraint firstItem="LNa-ut-vhh" firstAttribute="trailing" secondItem="1vn-q7-vfO" secondAttribute="trailingMargin" id="cjt-Le-Hnn"/>
                             <constraint firstItem="4ks-sJ-Kqv" firstAttribute="leading" secondItem="na7-5Z-Dg4" secondAttribute="trailing" constant="20" id="lWT-jB-cHh"/>
@@ -77,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7B0-31-rgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1698" y="-493"/>
+            <point key="canvasLocation" x="-289" y="-188"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
@@ -112,10 +122,19 @@
                                     <segue destination="ivw-KD-Ctk" kind="show" id="I00-sD-C4B"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP3-oU-aiq">
+                                <rect key="frame" x="16" y="102" width="343" height="30"/>
+                                <state key="normal" title="Stream"/>
+                                <connections>
+                                    <segue destination="fQR-Jq-JOF" kind="show" identifier="HomeToStream" id="PlK-uD-J2j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dkR-LY-pny" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2xt-ih-Pxb"/>
+                            <constraint firstItem="eP3-oU-aiq" firstAttribute="top" secondItem="3ky-Ka-RId" secondAttribute="bottom" constant="8" symbolic="YES" id="4bj-26-ABr"/>
+                            <constraint firstItem="eP3-oU-aiq" firstAttribute="leading" secondItem="3ky-Ka-RId" secondAttribute="leading" id="6WH-vT-7Ti"/>
                             <constraint firstItem="dkR-LY-pny" firstAttribute="leading" secondItem="3ky-Ka-RId" secondAttribute="trailing" constant="20" id="Hfd-jF-zZX"/>
                             <constraint firstItem="4Ci-Ar-Onx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Jb5-7o-DtH"/>
                             <constraint firstItem="4Ci-Ar-Onx" firstAttribute="leading" secondItem="dkR-LY-pny" secondAttribute="trailing" constant="20" id="NjO-lu-4EU"/>
@@ -124,13 +143,14 @@
                             <constraint firstItem="3ky-Ka-RId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cjW-q6-Y0t"/>
                             <constraint firstItem="4Ci-Ar-Onx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gmG-wH-6uf"/>
                             <constraint firstItem="3ky-Ka-RId" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jgT-ko-gXg"/>
+                            <constraint firstItem="eP3-oU-aiq" firstAttribute="trailing" secondItem="4Ci-Ar-Onx" secondAttribute="trailing" id="mmn-5I-8OE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home Screen" id="nND-yo-1qv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1708" y="1279"/>
+            <point key="canvasLocation" x="-290.39999999999998" y="2477.8110944527739"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="VoS-m0-HyK">
@@ -148,11 +168,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20g-ny-Kj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="460"/>
+            <point key="canvasLocation" x="1535" y="1013"/>
+        </scene>
+        <!--Stream View Controller-->
+        <scene sceneID="5jP-MW-TsA">
+            <objects>
+                <viewController id="fQR-Jq-JOF" customClass="StreamViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eXe-rR-foI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Izf-bu-0sR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i41-Yt-HM3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0Q-XZ-5Mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2583" y="1012"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="XRg-0M-xVg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47j-8J-zJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="gse-hq-5WV" customClass="LoadingViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8yC-7w-AMI"/>
@@ -177,9 +216,8 @@
                         <segue destination="AIp-6P-OTf" kind="show" identifier="LoadingToHome2" id="9fG-gQ-oPQ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="47j-8J-zJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4308" y="334"/>
+            <point key="canvasLocation" x="-2553" y="1098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1tI-B1-1kL">
@@ -195,7 +233,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XaA-FS-szX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2612" y="1278"/>
+            <point key="canvasLocation" x="-1193" y="2477"/>
         </scene>
         <!--Long Content View Controller-->
         <scene sceneID="dQu-Yb-xwL">
@@ -213,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4r-eK-2eM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="459"/>
+            <point key="canvasLocation" x="414" y="1012"/>
         </scene>
         <!--Short Content View Controller-->
         <scene sceneID="Wtg-si-88b">
@@ -231,12 +269,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7L-Xn-fXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="458"/>
+            <point key="canvasLocation" x="-542" y="1012"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I00-sD-C4B"/>
-        <segue reference="NYc-OE-jZG"/>
-        <segue reference="ow4-md-EhB"/>
+        <segue reference="2qq-1g-ijs"/>
+        <segue reference="i8I-HY-LRi"/>
+        <segue reference="LnF-Ip-I3a"/>
+        <segue reference="Vqh-Gg-o0n"/>
     </inferredMetricsTieBreakers>
 </document>

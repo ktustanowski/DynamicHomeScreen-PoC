@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gse-hq-5WV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="VoS-m0-HyK">
+            <objects>
+                <viewController id="sev-jW-r2Y" customClass="SettingsViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fLX-vm-DxX"/>
+                        <viewControllerLayoutGuide type="bottom" id="aYt-za-vBx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LnT-u9-SQZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20g-ny-Kj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="2894"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="XRg-0M-xVg">
+            <objects>
+                <viewController id="gse-hq-5WV" customClass="LoadingViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8yC-7w-AMI"/>
+                        <viewControllerLayoutGuide type="bottom" id="mS1-T4-VCR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TmN-eA-2Xg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcF-Vo-lsQ">
+                                <rect key="frame" x="63.5" y="238" width="248.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IbW-vf-rz6">
+                                <rect key="frame" x="138" y="202" width="100" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="40d-El-K8E"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3R-da-e1A">
+                                <rect key="frame" x="143" y="173" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IbW-vf-rz6" firstAttribute="centerX" secondItem="qcF-Vo-lsQ" secondAttribute="centerX" id="3Z7-WB-MGg"/>
+                            <constraint firstItem="IbW-vf-rz6" firstAttribute="top" secondItem="G3R-da-e1A" secondAttribute="bottom" constant="8" symbolic="YES" id="RDM-7v-0My"/>
+                            <constraint firstItem="qcF-Vo-lsQ" firstAttribute="top" secondItem="IbW-vf-rz6" secondAttribute="bottom" constant="8" symbolic="YES" id="TM5-7O-6wp"/>
+                            <constraint firstItem="IbW-vf-rz6" firstAttribute="top" secondItem="8yC-7w-AMI" secondAttribute="bottom" constant="182" id="c1c-UN-imz"/>
+                            <constraint firstItem="G3R-da-e1A" firstAttribute="centerX" secondItem="IbW-vf-rz6" secondAttribute="centerX" id="ufM-Id-RCg"/>
+                            <constraint firstItem="IbW-vf-rz6" firstAttribute="centerX" secondItem="TmN-eA-2Xg" secondAttribute="centerX" id="zMg-FA-IXL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeStyleSegmentedControl" destination="IbW-vf-rz6" id="FX2-dj-woI"/>
+                        <segue destination="uL1-qQ-t37" kind="presentation" identifier="LoadingToEmbededHome" modalTransitionStyle="crossDissolve" id="PgH-AP-SDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47j-8J-zJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1548" y="2167"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wg9-zh-ouI">
+            <objects>
+                <navigationController id="uL1-qQ-t37" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KTR-Su-OOp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="l4c-UK-y3C" kind="relationship" relationship="rootViewController" id="n7M-Do-Ezv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CP5-CE-DS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-753" y="2167"/>
+        </scene>
+        <!--ContainerViewController-->
+        <scene sceneID="wRr-T2-2bN">
+            <objects>
+                <viewController id="l4c-UK-y3C" customClass="HomeContainerViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lnu-pq-Swq"/>
+                        <viewControllerLayoutGuide type="bottom" id="6hW-vJ-9yc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0po-hn-q2r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ContainerViewController" id="uy7-rA-fup"/>
+                    <connections>
+                        <segue destination="ivw-KD-Ctk" kind="show" identifier="HomeToShort" id="KiP-s6-X9I"/>
+                        <segue destination="L79-de-aBb" kind="show" identifier="HomeToLong" id="whq-hs-DU6"/>
+                        <segue destination="sev-jW-r2Y" kind="show" identifier="HomeToSettings" id="Bgf-aZ-FQL"/>
+                        <segue destination="EnZ-IW-qFs" kind="show" identifier="HomeToStream" id="EkT-YZ-7hk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTc-Lk-5pH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="2166.5667166416792"/>
+        </scene>
+        <!--Long Content View Controller-->
+        <scene sceneID="dQu-Yb-xwL">
+            <objects>
+                <viewController id="L79-de-aBb" customClass="LongContentViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m82-JU-Ovg"/>
+                        <viewControllerLayoutGuide type="bottom" id="YZm-uM-AZQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sv1-pD-8Lq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4r-eK-2eM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="2527"/>
+        </scene>
+        <!--Short Content View Controller-->
+        <scene sceneID="Wtg-si-88b">
+            <objects>
+                <viewController id="ivw-KD-Ctk" customClass="ShortContentViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NMw-iq-TvC"/>
+                        <viewControllerLayoutGuide type="bottom" id="gfx-YL-3Kx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1kB-Dq-XBZ" customClass="Short">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7L-Xn-fXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="1822"/>
+        </scene>
+        <!--Stream View Controller-->
+        <scene sceneID="A8A-Jn-v3v">
+            <objects>
+                <viewController id="EnZ-IW-qFs" customClass="StreamViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bQC-hm-P5y"/>
+                        <viewControllerLayoutGuide type="bottom" id="P0m-9I-W8H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dOr-Wm-s1H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2d-m5-2on" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="1099"/>
+        </scene>
+    </scenes>
+</document>

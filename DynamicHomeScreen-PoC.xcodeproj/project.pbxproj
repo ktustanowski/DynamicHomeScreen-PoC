@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9AFF4EB61E251D6200C21AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */; };
 		9AFF4EB81E251D6200C21AAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EB71E251D6200C21AAB /* HomeViewController.swift */; };
-		9AFF4EBB1E251D6200C21AAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EB91E251D6200C21AAB /* Main.storyboard */; };
+		9AFF4EBB1E251D6200C21AAB /* SeparateViewControllers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EB91E251D6200C21AAB /* SeparateViewControllers.storyboard */; };
 		9AFF4EBD1E251D6200C21AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EBC1E251D6200C21AAB /* Assets.xcassets */; };
 		9AFF4EC01E251D6200C21AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EBE1E251D6200C21AAB /* LaunchScreen.storyboard */; };
 		9AFF4EC81E251E7400C21AAB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EC71E251E7400C21AAB /* SettingsViewController.swift */; };
@@ -17,13 +17,23 @@
 		9AFF4ECC1E251EA600C21AAB /* LongContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4ECB1E251EA600C21AAB /* LongContentViewController.swift */; };
 		9AFF4ECE1E25234100C21AAB /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4ECD1E25234100C21AAB /* LoadingViewController.swift */; };
 		9AFF4ED41E262ED200C21AAB /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4ED31E262ED200C21AAB /* Home2ViewController.swift */; };
+		9AFF4ED71E26440D00C21AAB /* EmbededViewControllers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4ED51E26440D00C21AAB /* EmbededViewControllers.storyboard */; };
+		9AFF4EDD1E2653A000C21AAB /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EDC1E2653A000C21AAB /* HomeContainerViewController.swift */; };
+		9AFF4EE31E2659B800C21AAB /* Home2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EE21E2659B800C21AAB /* Home2ViewController.storyboard */; };
+		9AFF4EE51E26637700C21AAB /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EE41E26637700C21AAB /* SettingsProvider.swift */; };
+		9AFF4EE71E26695400C21AAB /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EE61E26695400C21AAB /* HomeFactory.swift */; };
+		9AFF4EE91E266BAC00C21AAB /* Home3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EE81E266BAC00C21AAB /* Home3ViewController.storyboard */; };
+		9AFF4EEB1E266BFE00C21AAB /* Home3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EEA1E266BFE00C21AAB /* Home3ViewController.swift */; };
+		9AFF4EED1E26709300C21AAB /* HomeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EEC1E26709300C21AAB /* HomeTemplate.swift */; };
+		9AFF4EEF1E26723500C21AAB /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EEE1E26723500C21AAB /* StreamViewController.swift */; };
+		9AFF4EF11E2675DF00C21AAB /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EF01E2675DF00C21AAB /* HomeViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9AFF4EB21E251D6200C21AAB /* DynamicHomeScreen-PoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DynamicHomeScreen-PoC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AFF4EB71E251D6200C21AAB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9AFF4EBA1E251D6200C21AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9AFF4EBA1E251D6200C21AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SeparateViewControllers.storyboard; sourceTree = "<group>"; };
 		9AFF4EBC1E251D6200C21AAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AFF4EBF1E251D6200C21AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AFF4EC11E251D6200C21AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +42,16 @@
 		9AFF4ECB1E251EA600C21AAB /* LongContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongContentViewController.swift; sourceTree = "<group>"; };
 		9AFF4ECD1E25234100C21AAB /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		9AFF4ED31E262ED200C21AAB /* Home2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2ViewController.swift; sourceTree = "<group>"; };
+		9AFF4ED61E26440D00C21AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EmbededViewControllers.storyboard; sourceTree = "<group>"; };
+		9AFF4EDC1E2653A000C21AAB /* HomeContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
+		9AFF4EE21E2659B800C21AAB /* Home2ViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home2ViewController.storyboard; sourceTree = "<group>"; };
+		9AFF4EE41E26637700C21AAB /* SettingsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
+		9AFF4EE61E26695400C21AAB /* HomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		9AFF4EE81E266BAC00C21AAB /* Home3ViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home3ViewController.storyboard; sourceTree = "<group>"; };
+		9AFF4EEA1E266BFE00C21AAB /* Home3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home3ViewController.swift; sourceTree = "<group>"; };
+		9AFF4EEC1E26709300C21AAB /* HomeTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTemplate.swift; sourceTree = "<group>"; };
+		9AFF4EEE1E26723500C21AAB /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
+		9AFF4EF01E2675DF00C21AAB /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */,
-				9AFF4EB71E251D6200C21AAB /* HomeViewController.swift */,
-				9AFF4ED31E262ED200C21AAB /* Home2ViewController.swift */,
-				9AFF4EB91E251D6200C21AAB /* Main.storyboard */,
+				9AFF4EDC1E2653A000C21AAB /* HomeContainerViewController.swift */,
+				9AFF4ED91E26442D00C21AAB /* HomeTemplates */,
+				9AFF4ED81E26441F00C21AAB /* Storyboards */,
 				9AFF4EBC1E251D6200C21AAB /* Assets.xcassets */,
 				9AFF4EBE1E251D6200C21AAB /* LaunchScreen.storyboard */,
 				9AFF4EC11E251D6200C21AAB /* Info.plist */,
@@ -75,8 +95,34 @@
 				9AFF4EC91E251E9900C21AAB /* ShortContentViewController.swift */,
 				9AFF4ECB1E251EA600C21AAB /* LongContentViewController.swift */,
 				9AFF4ECD1E25234100C21AAB /* LoadingViewController.swift */,
+				9AFF4EE41E26637700C21AAB /* SettingsProvider.swift */,
+				9AFF4EEE1E26723500C21AAB /* StreamViewController.swift */,
 			);
 			path = "DynamicHomeScreen-PoC";
+			sourceTree = "<group>";
+		};
+		9AFF4ED81E26441F00C21AAB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9AFF4ED51E26440D00C21AAB /* EmbededViewControllers.storyboard */,
+				9AFF4EB91E251D6200C21AAB /* SeparateViewControllers.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		9AFF4ED91E26442D00C21AAB /* HomeTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				9AFF4EEC1E26709300C21AAB /* HomeTemplate.swift */,
+				9AFF4EE61E26695400C21AAB /* HomeFactory.swift */,
+				9AFF4EB71E251D6200C21AAB /* HomeViewController.swift */,
+				9AFF4ED31E262ED200C21AAB /* Home2ViewController.swift */,
+				9AFF4EEA1E266BFE00C21AAB /* Home3ViewController.swift */,
+				9AFF4EF01E2675DF00C21AAB /* HomeViewController.storyboard */,
+				9AFF4EE21E2659B800C21AAB /* Home2ViewController.storyboard */,
+				9AFF4EE81E266BAC00C21AAB /* Home3ViewController.storyboard */,
+			);
+			name = HomeTemplates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +184,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AFF4EE31E2659B800C21AAB /* Home2ViewController.storyboard in Resources */,
+				9AFF4ED71E26440D00C21AAB /* EmbededViewControllers.storyboard in Resources */,
+				9AFF4EF11E2675DF00C21AAB /* HomeViewController.storyboard in Resources */,
 				9AFF4EC01E251D6200C21AAB /* LaunchScreen.storyboard in Resources */,
+				9AFF4EE91E266BAC00C21AAB /* Home3ViewController.storyboard in Resources */,
 				9AFF4EBD1E251D6200C21AAB /* Assets.xcassets in Resources */,
-				9AFF4EBB1E251D6200C21AAB /* Main.storyboard in Resources */,
+				9AFF4EBB1E251D6200C21AAB /* SeparateViewControllers.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,10 +203,16 @@
 			files = (
 				9AFF4ECC1E251EA600C21AAB /* LongContentViewController.swift in Sources */,
 				9AFF4ED41E262ED200C21AAB /* Home2ViewController.swift in Sources */,
+				9AFF4EED1E26709300C21AAB /* HomeTemplate.swift in Sources */,
 				9AFF4EB81E251D6200C21AAB /* HomeViewController.swift in Sources */,
 				9AFF4EB61E251D6200C21AAB /* AppDelegate.swift in Sources */,
 				9AFF4ECE1E25234100C21AAB /* LoadingViewController.swift in Sources */,
+				9AFF4EDD1E2653A000C21AAB /* HomeContainerViewController.swift in Sources */,
 				9AFF4ECA1E251E9900C21AAB /* ShortContentViewController.swift in Sources */,
+				9AFF4EE51E26637700C21AAB /* SettingsProvider.swift in Sources */,
+				9AFF4EEF1E26723500C21AAB /* StreamViewController.swift in Sources */,
+				9AFF4EEB1E266BFE00C21AAB /* Home3ViewController.swift in Sources */,
+				9AFF4EE71E26695400C21AAB /* HomeFactory.swift in Sources */,
 				9AFF4EC81E251E7400C21AAB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,12 +220,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9AFF4EB91E251D6200C21AAB /* Main.storyboard */ = {
+		9AFF4EB91E251D6200C21AAB /* SeparateViewControllers.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9AFF4EBA1E251D6200C21AAB /* Base */,
 			);
-			name = Main.storyboard;
+			name = SeparateViewControllers.storyboard;
 			sourceTree = "<group>";
 		};
 		9AFF4EBE1E251D6200C21AAB /* LaunchScreen.storyboard */ = {
@@ -178,6 +234,14 @@
 				9AFF4EBF1E251D6200C21AAB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9AFF4ED51E26440D00C21AAB /* EmbededViewControllers.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AFF4ED61E26440D00C21AAB /* Base */,
+			);
+			name = EmbededViewControllers.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

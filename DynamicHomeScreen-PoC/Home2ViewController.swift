@@ -12,7 +12,8 @@ class Home2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        parent?.title = "Home 2"
     }
     
     override func didReceiveMemoryWarning() {
@@ -21,4 +22,3 @@ class Home2ViewController: UIViewController {
     }
     
 }
-
