@@ -16,6 +16,7 @@
 		9AFF4ECA1E251E9900C21AAB /* ShortContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EC91E251E9900C21AAB /* ShortContentViewController.swift */; };
 		9AFF4ECC1E251EA600C21AAB /* LongContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4ECB1E251EA600C21AAB /* LongContentViewController.swift */; };
 		9AFF4ECE1E25234100C21AAB /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4ECD1E25234100C21AAB /* LoadingViewController.swift */; };
+		9AFF4ED41E262ED200C21AAB /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4ED31E262ED200C21AAB /* Home2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9AFF4EC91E251E9900C21AAB /* ShortContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortContentViewController.swift; sourceTree = "<group>"; };
 		9AFF4ECB1E251EA600C21AAB /* LongContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongContentViewController.swift; sourceTree = "<group>"; };
 		9AFF4ECD1E25234100C21AAB /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		9AFF4ED31E262ED200C21AAB /* Home2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */,
 				9AFF4EB71E251D6200C21AAB /* HomeViewController.swift */,
+				9AFF4ED31E262ED200C21AAB /* Home2ViewController.swift */,
 				9AFF4EB91E251D6200C21AAB /* Main.storyboard */,
 				9AFF4EBC1E251D6200C21AAB /* Assets.xcassets */,
 				9AFF4EBE1E251D6200C21AAB /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AFF4ECC1E251EA600C21AAB /* LongContentViewController.swift in Sources */,
+				9AFF4ED41E262ED200C21AAB /* Home2ViewController.swift in Sources */,
 				9AFF4EB81E251D6200C21AAB /* HomeViewController.swift in Sources */,
 				9AFF4EB61E251D6200C21AAB /* AppDelegate.swift in Sources */,
 				9AFF4ECE1E25234100C21AAB /* LoadingViewController.swift in Sources */,
@@ -315,6 +319,7 @@
 				9AFF4EC61E251D6200C21AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

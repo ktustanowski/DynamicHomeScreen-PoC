@@ -10,6 +10,75 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fHW-LU-QmZ">
+            <objects>
+                <navigationController id="AIp-6P-OTf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xO9-1k-nRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EJK-Pk-0ha" kind="relationship" relationship="rootViewController" id="bUs-4y-fJE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97P-Y4-juW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2612" y="-493"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dEh-n0-KAJ">
+            <objects>
+                <viewController id="EJK-Pk-0ha" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TpU-mU-yrk"/>
+                        <viewControllerLayoutGuide type="bottom" id="9LJ-E3-rRk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1vn-q7-vfO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNa-ut-vhh">
+                                <rect key="frame" x="258" y="72" width="101" height="30"/>
+                                <state key="normal" title="Long"/>
+                                <connections>
+                                    <segue destination="L79-de-aBb" kind="show" id="2qq-1g-ijs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="na7-5Z-Dg4">
+                                <rect key="frame" x="16" y="72" width="101" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="sev-jW-r2Y" kind="show" id="Vqh-Gg-o0n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ks-sJ-Kqv">
+                                <rect key="frame" x="137" y="72" width="101" height="30"/>
+                                <state key="normal" title="Short"/>
+                                <connections>
+                                    <segue destination="ivw-KD-Ctk" kind="show" id="LnF-Ip-I3a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ks-sJ-Kqv" firstAttribute="baseline" secondItem="LNa-ut-vhh" secondAttribute="baseline" id="6pu-by-iXE"/>
+                            <constraint firstItem="4ks-sJ-Kqv" firstAttribute="width" secondItem="na7-5Z-Dg4" secondAttribute="width" id="GNY-Ve-DUm"/>
+                            <constraint firstItem="na7-5Z-Dg4" firstAttribute="top" secondItem="TpU-mU-yrk" secondAttribute="bottom" constant="8" symbolic="YES" id="MsE-8M-Yq9"/>
+                            <constraint firstItem="na7-5Z-Dg4" firstAttribute="leading" secondItem="1vn-q7-vfO" secondAttribute="leadingMargin" id="Wgd-J2-YKK"/>
+                            <constraint firstItem="LNa-ut-vhh" firstAttribute="trailing" secondItem="1vn-q7-vfO" secondAttribute="trailingMargin" id="cjt-Le-Hnn"/>
+                            <constraint firstItem="4ks-sJ-Kqv" firstAttribute="leading" secondItem="na7-5Z-Dg4" secondAttribute="trailing" constant="20" id="lWT-jB-cHh"/>
+                            <constraint firstItem="LNa-ut-vhh" firstAttribute="leading" secondItem="4ks-sJ-Kqv" secondAttribute="trailing" constant="20" id="phk-Xe-c1H"/>
+                            <constraint firstItem="LNa-ut-vhh" firstAttribute="width" secondItem="na7-5Z-Dg4" secondAttribute="width" id="s9e-wz-CfR"/>
+                            <constraint firstItem="na7-5Z-Dg4" firstAttribute="baseline" secondItem="4ks-sJ-Kqv" secondAttribute="baseline" id="zgB-Lb-LAp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vOL-W1-eKn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7B0-31-rgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1698" y="-493"/>
+        </scene>
         <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -61,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-794" y="61"/>
+            <point key="canvasLocation" x="-1708" y="1279"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="VoS-m0-HyK">
@@ -79,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20g-ny-Kj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="511" y="-252"/>
+            <point key="canvasLocation" x="1166" y="460"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="XRg-0M-xVg">
@@ -105,11 +174,12 @@
                     </view>
                     <connections>
                         <segue destination="9vN-FS-1D2" kind="presentation" identifier="LoadingToHome" modalTransitionStyle="crossDissolve" id="geW-7d-0nn"/>
+                        <segue destination="AIp-6P-OTf" kind="show" identifier="LoadingToHome2" id="9fG-gQ-oPQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47j-8J-zJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2740" y="61.619190404797607"/>
+            <point key="canvasLocation" x="-4308" y="334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1tI-B1-1kL">
@@ -125,7 +195,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XaA-FS-szX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1698" y="61"/>
+            <point key="canvasLocation" x="-2612" y="1278"/>
         </scene>
         <!--Long Content View Controller-->
         <scene sceneID="dQu-Yb-xwL">
@@ -143,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4r-eK-2eM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-794" y="1014"/>
+            <point key="canvasLocation" x="44" y="459"/>
         </scene>
         <!--Short Content View Controller-->
         <scene sceneID="Wtg-si-88b">
@@ -161,7 +231,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7L-Xn-fXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="450"/>
+            <point key="canvasLocation" x="-911" y="458"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="I00-sD-C4B"/>
+        <segue reference="NYc-OE-jZG"/>
+        <segue reference="ow4-md-EhB"/>
+    </inferredMetricsTieBreakers>
 </document>

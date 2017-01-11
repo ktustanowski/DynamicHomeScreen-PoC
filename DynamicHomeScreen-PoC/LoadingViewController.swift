@@ -14,7 +14,7 @@ class LoadingViewController: UIViewController {
         super.viewDidLoad()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-            self?.performSegue(withIdentifier: "LoadingToHome", sender: nil)
+            self?.performSegue(withIdentifier: "LoadingToHome2", sender: nil)
         }
     }
     
