@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HomeActions: class {
+public protocol HomeActions: class {
     
     var longSelected: ((_ identifier: String)->())? { get set }
     var shortSelected: ((_ identifier: String)->())? { get set }

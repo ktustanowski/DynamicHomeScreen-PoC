@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mcu-pE-LbJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen-->
+        <scene sceneID="6xH-aH-qwO">
+            <objects>
+                <viewController id="Mcu-pE-LbJ" customClass="HomeViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F90-Ev-D5X"/>
+                        <viewControllerLayoutGuide type="bottom" id="mfY-h3-GSj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62q-Up-Qdh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-Wu-pFS">
+                                <rect key="frame" x="16" y="20" width="101" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="settingsButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="9dH-QY-XKF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzR-7c-Vud">
+                                <rect key="frame" x="258" y="20" width="101" height="30"/>
+                                <state key="normal" title="Long"/>
+                                <connections>
+                                    <action selector="longButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="DU7-YI-JQX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-OJ-msE">
+                                <rect key="frame" x="137" y="20" width="101" height="30"/>
+                                <state key="normal" title="Short"/>
+                                <connections>
+                                    <action selector="shortButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="bfb-ev-1ya"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PzR-7c-Vud" firstAttribute="trailing" secondItem="62q-Up-Qdh" secondAttribute="trailingMargin" id="3qy-Si-5i8"/>
+                            <constraint firstItem="6Ts-Wu-pFS" firstAttribute="leading" secondItem="62q-Up-Qdh" secondAttribute="leadingMargin" id="AWi-aq-ULT"/>
+                            <constraint firstItem="6Ts-Wu-pFS" firstAttribute="top" secondItem="F90-Ev-D5X" secondAttribute="bottom" id="Yr6-Nk-teP"/>
+                            <constraint firstItem="PzR-7c-Vud" firstAttribute="width" secondItem="6Ts-Wu-pFS" secondAttribute="width" id="ez4-cv-oHD"/>
+                            <constraint firstItem="LU7-OJ-msE" firstAttribute="width" secondItem="6Ts-Wu-pFS" secondAttribute="width" id="ghc-bJ-jS6"/>
+                            <constraint firstItem="LU7-OJ-msE" firstAttribute="top" secondItem="F90-Ev-D5X" secondAttribute="bottom" id="iGl-6V-mfb"/>
+                            <constraint firstItem="LU7-OJ-msE" firstAttribute="leading" secondItem="6Ts-Wu-pFS" secondAttribute="trailing" constant="20" id="iON-8c-iu4"/>
+                            <constraint firstItem="PzR-7c-Vud" firstAttribute="leading" secondItem="LU7-OJ-msE" secondAttribute="trailing" constant="20" id="s2N-Dz-bup"/>
+                            <constraint firstItem="PzR-7c-Vud" firstAttribute="top" secondItem="F90-Ev-D5X" secondAttribute="bottom" id="uzr-7T-4wN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home Screen" id="wt0-Ax-Lrz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGl-7r-01f" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289" y="2478"/>
+        </scene>
+    </scenes>
+</document>

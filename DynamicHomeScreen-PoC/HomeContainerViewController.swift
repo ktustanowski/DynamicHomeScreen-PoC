@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HomeTemplates
 
 class HomeContainerViewController: UIViewController {
     

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mcu-pE-LbJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen-->
+        <scene sceneID="6xH-aH-qwO">
+            <objects>
+                <viewController id="Mcu-pE-LbJ" customClass="Home3ViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F90-Ev-D5X"/>
+                        <viewControllerLayoutGuide type="bottom" id="mfY-h3-GSj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62q-Up-Qdh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-Wu-pFS">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="settingsButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="gVj-qT-2ZH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzR-7c-Vud">
+                                <rect key="frame" x="16" y="104" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Long"/>
+                                <connections>
+                                    <action selector="longButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="G0u-Ng-7pK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-OJ-msE">
+                                <rect key="frame" x="16" y="66" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Short"/>
+                                <connections>
+                                    <action selector="shortButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="osZ-ir-bnN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-Td-qUJ">
+                                <rect key="frame" x="16" y="142" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Stream"/>
+                                <connections>
+                                    <action selector="streamButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="T50-Kj-FuZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Ts-Wu-pFS" firstAttribute="leading" secondItem="62q-Up-Qdh" secondAttribute="leadingMargin" id="1q7-WD-7dZ"/>
+                            <constraint firstItem="oEl-Td-qUJ" firstAttribute="leading" secondItem="PzR-7c-Vud" secondAttribute="leading" id="26r-OG-eXJ"/>
+                            <constraint firstItem="LU7-OJ-msE" firstAttribute="top" secondItem="6Ts-Wu-pFS" secondAttribute="bottom" constant="8" symbolic="YES" id="Dz3-qV-x4i"/>
+                            <constraint firstItem="LU7-OJ-msE" firstAttribute="leading" secondItem="PzR-7c-Vud" secondAttribute="leading" id="Knc-hc-AU6"/>
+                            <constraint firstItem="PzR-7c-Vud" firstAttribute="top" secondItem="LU7-OJ-msE" secondAttribute="bottom" constant="8" symbolic="YES" id="RUU-dv-mTB"/>
+                            <constraint firstItem="6Ts-Wu-pFS" firstAttribute="trailing" secondItem="62q-Up-Qdh" secondAttribute="trailingMargin" id="SBQ-eb-7eC"/>
+                            <constraint firstItem="oEl-Td-qUJ" firstAttribute="trailing" secondItem="PzR-7c-Vud" secondAttribute="trailing" id="UEy-Ky-r7F"/>
+                            <constraint firstItem="LU7-OJ-msE" firstAttribute="trailing" secondItem="PzR-7c-Vud" secondAttribute="trailing" id="auK-bA-Xzg"/>
+                            <constraint firstItem="6Ts-Wu-pFS" firstAttribute="trailing" secondItem="LU7-OJ-msE" secondAttribute="trailing" id="dVp-q3-CsW"/>
+                            <constraint firstItem="6Ts-Wu-pFS" firstAttribute="leading" secondItem="LU7-OJ-msE" secondAttribute="leading" id="iWN-UH-zfi"/>
+                            <constraint firstItem="6Ts-Wu-pFS" firstAttribute="top" secondItem="F90-Ev-D5X" secondAttribute="bottom" constant="8" symbolic="YES" id="ibz-P7-wQQ"/>
+                            <constraint firstItem="oEl-Td-qUJ" firstAttribute="top" secondItem="PzR-7c-Vud" secondAttribute="bottom" constant="8" symbolic="YES" id="y53-tR-dEk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home Screen" id="wt0-Ax-Lrz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGl-7r-01f" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290.39999999999998" y="2477.8110944527739"/>
+        </scene>
+    </scenes>
+</document>
