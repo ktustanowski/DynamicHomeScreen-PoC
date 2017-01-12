@@ -8,12 +8,14 @@
 
 import UIKit
 
-class StreamViewController: UIViewController {
+class StreamViewController: UIViewController, HasContent {
+    
+    var content: Content?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Stream"
+        title = content?.title
     }
     
 }

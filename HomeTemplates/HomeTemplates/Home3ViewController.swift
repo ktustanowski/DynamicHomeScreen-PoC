@@ -8,11 +8,13 @@
 
 import UIKit
 
-class Home3ViewController: UIViewController, HomeActions {
+class Home3ViewController: UIViewController, HomeActions, HasViewModel {
     
-    var longSelected: ((_ identifier: String)->())?
-    var shortSelected: ((_ identifier: String)->())?
-    var streamSelected: ((_ identifier: String)->())?
+    var baseViewModel: BaseHomeViewModel? = BaseHomeViewModel()
+    
+    var longSelected: ((_ identifier: HomeItem)->())?
+    var shortSelected: ((_ identifier: HomeItem)->())?
+    var streamSelected: ((_ identifier: HomeItem)->())?
     var settingsSelected: (()->())?
 
     var test: (()->())?
@@ -28,15 +30,21 @@ class Home3ViewController: UIViewController, HomeActions {
     }
 
     @IBAction func shortButtonTapped() {
-        shortSelected?("1")
+        guard let item = baseViewModel?.items?.first else { return }
+        
+        shortSelected?(item)
     }
 
     @IBAction func longButtonTapped() {
-        longSelected?("1")
+        guard let item = baseViewModel?.items?.last else { return }
+        
+        longSelected?(item)
     }
 
     @IBAction func streamButtonTapped() {
-        streamSelected?("1")
+        guard let item = baseViewModel?.items?[1] else { return }
+        
+        streamSelected?(item)
     }
 
 }

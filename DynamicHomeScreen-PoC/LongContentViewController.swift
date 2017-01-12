@@ -8,11 +8,14 @@
 
 import UIKit
 
-class LongContentViewController: UIViewController {
+class LongContentViewController: UIViewController, HasContent {
+    
+    var content: Content?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Long Content"
+        
+        title = content?.title
     }
 
 }

@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ShortContentViewController: UIViewController {
+class ShortContentViewController: UIViewController, HasContent {
  
+    var content: Content?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Short Content"
+        
+        title = content?.title
     }
     
 }

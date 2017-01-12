@@ -54,6 +54,7 @@
                                     <segment title="1"/>
                                     <segment title="2"/>
                                     <segment title="3"/>
+                                    <segment title="4"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>

@@ -10,9 +10,9 @@ import Foundation
 
 public protocol HomeActions: class {
     
-    var longSelected: ((_ identifier: String)->())? { get set }
-    var shortSelected: ((_ identifier: String)->())? { get set }
-    var streamSelected: ((_ identifier: String)->())? { get set }
+    var longSelected: ((_ identifier: HomeItem)->())? { get set }
+    var shortSelected: ((_ identifier: HomeItem)->())? { get set }
+    var streamSelected: ((_ identifier: HomeItem)->())? { get set }
     var settingsSelected: (()->())? { get set }
 
 }

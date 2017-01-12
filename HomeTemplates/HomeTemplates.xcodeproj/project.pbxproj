@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A3DE3F91E27CA7500810C80 /* HomeItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE3F81E27CA7500810C80 /* HomeItemStruct.swift */; };
+		9A3DE3FB1E27CBC800810C80 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE3FA1E27CBC800810C80 /* Refreshable.swift */; };
 		9AFF4F071E27A74300C21AAB /* HomeTemplates.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AFF4F051E27A74300C21AAB /* HomeTemplates.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AFF4F1D1E27A7F600C21AAB /* Home2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4F151E27A7F600C21AAB /* Home2ViewController.storyboard */; };
 		9AFF4F1E1E27A7F600C21AAB /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F161E27A7F600C21AAB /* Home2ViewController.swift */; };
@@ -16,9 +18,17 @@
 		9AFF4F221E27A7F700C21AAB /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F1A1E27A7F600C21AAB /* HomeFactory.swift */; };
 		9AFF4F231E27A7F700C21AAB /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4F1B1E27A7F600C21AAB /* HomeViewController.storyboard */; };
 		9AFF4F241E27A7F700C21AAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F1C1E27A7F600C21AAB /* HomeViewController.swift */; };
+		9AFF4F2B1E27AB5000C21AAB /* Home4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F2A1E27AB5000C21AAB /* Home4ViewController.swift */; };
+		9AFF4F2D1E27AB5E00C21AAB /* Home4ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4F2C1E27AB5E00C21AAB /* Home4ViewController.storyboard */; };
+		9AFF4F301E27ADDE00C21AAB /* BaseHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F2F1E27ADDE00C21AAB /* BaseHomeViewModel.swift */; };
+		9AFF4F321E27AE0A00C21AAB /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F311E27AE0A00C21AAB /* HomeItem.swift */; };
+		9AFF4F341E27B06400C21AAB /* Home4ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F331E27B06400C21AAB /* Home4ViewModel.swift */; };
+		9AFF4F361E27B0B900C21AAB /* HasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F351E27B0B900C21AAB /* HasViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A3DE3F81E27CA7500810C80 /* HomeItemStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemStruct.swift; sourceTree = "<group>"; };
+		9A3DE3FA1E27CBC800810C80 /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		9AFF4F021E27A74300C21AAB /* HomeTemplates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HomeTemplates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFF4F051E27A74300C21AAB /* HomeTemplates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTemplates.h; sourceTree = "<group>"; };
 		9AFF4F061E27A74300C21AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +40,12 @@
 		9AFF4F1A1E27A7F600C21AAB /* HomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		9AFF4F1B1E27A7F600C21AAB /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		9AFF4F1C1E27A7F600C21AAB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9AFF4F2A1E27AB5000C21AAB /* Home4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home4ViewController.swift; sourceTree = "<group>"; };
+		9AFF4F2C1E27AB5E00C21AAB /* Home4ViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home4ViewController.storyboard; sourceTree = "<group>"; };
+		9AFF4F2F1E27ADDE00C21AAB /* BaseHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHomeViewModel.swift; sourceTree = "<group>"; };
+		9AFF4F311E27AE0A00C21AAB /* HomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		9AFF4F331E27B06400C21AAB /* Home4ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home4ViewModel.swift; sourceTree = "<group>"; };
+		9AFF4F351E27B0B900C21AAB /* HasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +62,7 @@
 		9AFF4EF81E27A74300C21AAB = {
 			isa = PBXGroup;
 			children = (
+				9A3DE3F81E27CA7500810C80 /* HomeItemStruct.swift */,
 				9AFF4F041E27A74300C21AAB /* HomeTemplates */,
 				9AFF4F031E27A74300C21AAB /* Products */,
 			);
@@ -62,18 +79,33 @@
 		9AFF4F041E27A74300C21AAB /* HomeTemplates */ = {
 			isa = PBXGroup;
 			children = (
-				9AFF4F151E27A7F600C21AAB /* Home2ViewController.storyboard */,
-				9AFF4F161E27A7F600C21AAB /* Home2ViewController.swift */,
-				9AFF4F171E27A7F600C21AAB /* Home3ViewController.storyboard */,
-				9AFF4F181E27A7F600C21AAB /* Home3ViewController.swift */,
+				9A3DE3FA1E27CBC800810C80 /* Refreshable.swift */,
 				9AFF4F191E27A7F600C21AAB /* HomeActions.swift */,
+				9AFF4F351E27B0B900C21AAB /* HasViewModel.swift */,
 				9AFF4F1A1E27A7F600C21AAB /* HomeFactory.swift */,
-				9AFF4F1B1E27A7F600C21AAB /* HomeViewController.storyboard */,
-				9AFF4F1C1E27A7F600C21AAB /* HomeViewController.swift */,
+				9AFF4F2E1E27ADC100C21AAB /* HomeViewControllers */,
 				9AFF4F051E27A74300C21AAB /* HomeTemplates.h */,
 				9AFF4F061E27A74300C21AAB /* Info.plist */,
+				9AFF4F2F1E27ADDE00C21AAB /* BaseHomeViewModel.swift */,
+				9AFF4F311E27AE0A00C21AAB /* HomeItem.swift */,
+				9AFF4F331E27B06400C21AAB /* Home4ViewModel.swift */,
 			);
 			path = HomeTemplates;
+			sourceTree = "<group>";
+		};
+		9AFF4F2E1E27ADC100C21AAB /* HomeViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9AFF4F1C1E27A7F600C21AAB /* HomeViewController.swift */,
+				9AFF4F161E27A7F600C21AAB /* Home2ViewController.swift */,
+				9AFF4F181E27A7F600C21AAB /* Home3ViewController.swift */,
+				9AFF4F2A1E27AB5000C21AAB /* Home4ViewController.swift */,
+				9AFF4F1B1E27A7F600C21AAB /* HomeViewController.storyboard */,
+				9AFF4F151E27A7F600C21AAB /* Home2ViewController.storyboard */,
+				9AFF4F171E27A7F600C21AAB /* Home3ViewController.storyboard */,
+				9AFF4F2C1E27AB5E00C21AAB /* Home4ViewController.storyboard */,
+			);
+			name = HomeViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AFF4F1F1E27A7F700C21AAB /* Home3ViewController.storyboard in Resources */,
+				9AFF4F2D1E27AB5E00C21AAB /* Home4ViewController.storyboard in Resources */,
 				9AFF4F1D1E27A7F600C21AAB /* Home2ViewController.storyboard in Resources */,
 				9AFF4F231E27A7F700C21AAB /* HomeViewController.storyboard in Resources */,
 			);
@@ -160,9 +193,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AFF4F241E27A7F700C21AAB /* HomeViewController.swift in Sources */,
+				9AFF4F301E27ADDE00C21AAB /* BaseHomeViewModel.swift in Sources */,
+				9AFF4F341E27B06400C21AAB /* Home4ViewModel.swift in Sources */,
+				9A3DE3FB1E27CBC800810C80 /* Refreshable.swift in Sources */,
 				9AFF4F1E1E27A7F600C21AAB /* Home2ViewController.swift in Sources */,
+				9AFF4F321E27AE0A00C21AAB /* HomeItem.swift in Sources */,
 				9AFF4F221E27A7F700C21AAB /* HomeFactory.swift in Sources */,
+				9A3DE3F91E27CA7500810C80 /* HomeItemStruct.swift in Sources */,
 				9AFF4F201E27A7F700C21AAB /* Home3ViewController.swift in Sources */,
+				9AFF4F361E27B0B900C21AAB /* HasViewModel.swift in Sources */,
+				9AFF4F2B1E27AB5000C21AAB /* Home4ViewController.swift in Sources */,
 				9AFF4F211E27A7F700C21AAB /* HomeActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

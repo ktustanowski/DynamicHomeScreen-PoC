@@ -17,7 +17,7 @@ class LoadingViewController: UIViewController {
         
         homeStyleSegmentedControl.addTarget(self, action: #selector(homeStyleChanged), for: .valueChanged)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             self?.performSegue(withIdentifier: "LoadingToEmbededHome", sender: nil)
         }
     }
