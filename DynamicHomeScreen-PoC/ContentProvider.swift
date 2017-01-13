@@ -10,7 +10,7 @@ import Foundation
 
 struct ContentProvider {
     
-    static func loadContent() -> [Content]? {
+    static func loadContent(completion: @escaping ([Content]?)->()) {
         let zeroItemOne = ContentItem(identifier: "0.1", title: "Zero Item One", description: "Zero Item One Description")
         let zeroItemTwo = ContentItem(identifier: "0.2", title: "Zero Item Two", description: "Zero Item Two Description")
         let zero = Content(identifier: "0", title: "Zero", description: "Zero Content Description", related: [zeroItemOne, zeroItemTwo], few: nil, less: nil, important: nil, parameters: nil, not: nil, neededIn: nil, home: nil)
@@ -21,7 +21,9 @@ struct ContentProvider {
         
         let second = Content(identifier: "2", title: "Second", description: "Second Content Description", related: nil, few: nil, less: nil, important: nil, parameters: nil, not: nil, neededIn: nil, home: nil)
         
-        return [zero, first, second]
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            completion([zero, first, second])
+        }
     }
     
 }

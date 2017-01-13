@@ -13,10 +13,8 @@ class Home4ViewModel: BaseHomeViewModel {
     var cellViewModels: [Home4ItemCellViewModel] = []
     
     override func setup() {
-        guard let items = items else {
-            cellViewModels.removeAll()
-            return
-        }
+        cellViewModels.removeAll()
+        guard let items = items else { return }
         
         for item in items {
             if let cellViewModel = Home4ItemCellViewModel(item: item) {

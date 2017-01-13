@@ -113,7 +113,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ContainerViewController" id="uy7-rA-fup"/>
+                    <navigationItem key="navigationItem" title="ContainerViewController" id="uy7-rA-fup">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="3Ex-Qa-HsS">
+                            <connections>
+                                <action selector="refreshButtonTapped" destination="l4c-UK-y3C" id="P6g-ZY-OsG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="ivw-KD-Ctk" kind="show" identifier="HomeToShort" id="KiP-s6-X9I"/>
                         <segue destination="L79-de-aBb" kind="show" identifier="HomeToLong" id="whq-hs-DU6"/>

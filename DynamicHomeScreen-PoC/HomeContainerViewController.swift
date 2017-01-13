@@ -22,6 +22,7 @@ class HomeContainerViewController: UIViewController {
         super.viewDidLoad()
         
         embedHomeViewController()
+        loadData()
     }
     
     func embedHomeViewController() {
@@ -51,19 +52,21 @@ class HomeContainerViewController: UIViewController {
                 self?.performSegue(withIdentifier: SegueIdentifier.homeToStream.rawValue, sender: item)
             }
         }
-        
-        if let contents = ContentProvider.loadContent(),
-            let viewControllerWithViewModel = viewController as? HasViewModel {
-            var homeItems = [HomeItem]()
-            for content in contents {
-                homeItems.append(content)
-            }
-            
-            viewControllerWithViewModel.baseViewModel?.items = homeItems
-        }
-        
     }
  
+    func loadData() {
+        ContentProvider.loadContent { [weak self] contents in
+            guard
+                let contents = contents,
+                let viewControllerWithViewModel = self?.childViewControllers.first as? HasViewModel,
+                let refreshableViewController = self?.childViewControllers.first as? Refreshable
+                else { return }
+            
+                viewControllerWithViewModel.baseViewModel?.items = contents.map({ $0 as HomeItem })
+                refreshableViewController.refresh()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier != SegueIdentifier.homeToSettings.rawValue else { return }
         
@@ -72,5 +75,10 @@ class HomeContainerViewController: UIViewController {
             destination.content = content
         }
     }
+    
+    @IBAction func refreshButtonTapped() {
+        loadData()
+    }
+    
 }
 
