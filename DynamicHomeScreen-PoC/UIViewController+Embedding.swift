@@ -18,6 +18,8 @@ extension UIViewController {
     }
     
     func removeEmbedded(_ viewController: UIViewController) {
-        
+        viewController.willMove(toParentViewController: nil)
+        viewController.view.removeFromSuperview()
+        viewController.removeFromParentViewController()
     }
 }

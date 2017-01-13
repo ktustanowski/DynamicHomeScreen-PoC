@@ -28,11 +28,12 @@ class Home4ViewController: UITableViewController, HasViewModel, HomeActions, Ref
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        parent?.title = "Home 4"
         didLaunch?()
     }
-    
+
     @IBAction func changeUiButtonTapped() {
-        guard let newViewController = HomeFactory.create(withStyle: 1) else { return }
+        guard let newViewController = HomeFactory.create(withStyle: 0) else { return }
         /* we can do here any required setup i.e. inform what item should be displayed */
         replaceWith?(newViewController)
     }

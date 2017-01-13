@@ -13,7 +13,7 @@
         <!--Home Screen-->
         <scene sceneID="6xH-aH-qwO">
             <objects>
-                <viewController id="Mcu-pE-LbJ" customClass="HomeViewController" customModule="DynamicHomeScreen_PoC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mcu-pE-LbJ" customClass="HomeViewController" customModule="HomeTemplates" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F90-Ev-D5X"/>
                         <viewControllerLayoutGuide type="bottom" id="mfY-h3-GSj"/>
@@ -43,12 +43,22 @@
                                     <action selector="shortButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="bfb-ev-1ya"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8T-pH-vw6">
+                                <rect key="frame" x="16" y="58" width="101" height="30"/>
+                                <state key="normal" title="Change UI"/>
+                                <connections>
+                                    <action selector="changeUiButtonTapped" destination="Mcu-pE-LbJ" eventType="touchUpInside" id="Yf3-SM-K8g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PzR-7c-Vud" firstAttribute="trailing" secondItem="62q-Up-Qdh" secondAttribute="trailingMargin" id="3qy-Si-5i8"/>
                             <constraint firstItem="6Ts-Wu-pFS" firstAttribute="leading" secondItem="62q-Up-Qdh" secondAttribute="leadingMargin" id="AWi-aq-ULT"/>
+                            <constraint firstItem="W8T-pH-vw6" firstAttribute="trailing" secondItem="6Ts-Wu-pFS" secondAttribute="trailing" id="Cjs-6W-kTS"/>
+                            <constraint firstItem="W8T-pH-vw6" firstAttribute="leading" secondItem="6Ts-Wu-pFS" secondAttribute="leading" id="XAk-mj-fYm"/>
                             <constraint firstItem="6Ts-Wu-pFS" firstAttribute="top" secondItem="F90-Ev-D5X" secondAttribute="bottom" id="Yr6-Nk-teP"/>
+                            <constraint firstItem="W8T-pH-vw6" firstAttribute="top" secondItem="6Ts-Wu-pFS" secondAttribute="bottom" constant="8" symbolic="YES" id="ZlW-27-61u"/>
                             <constraint firstItem="PzR-7c-Vud" firstAttribute="width" secondItem="6Ts-Wu-pFS" secondAttribute="width" id="ez4-cv-oHD"/>
                             <constraint firstItem="LU7-OJ-msE" firstAttribute="width" secondItem="6Ts-Wu-pFS" secondAttribute="width" id="ghc-bJ-jS6"/>
                             <constraint firstItem="LU7-OJ-msE" firstAttribute="top" secondItem="F90-Ev-D5X" secondAttribute="bottom" id="iGl-6V-mfb"/>

@@ -65,11 +65,16 @@ extension HomeContainerViewController {
         
         actionViewController.replaceWith = { [weak self] newViewController in
             guard let viewController = self?.childViewControllers.first else { return }
+
             self?.replace(viewController: viewController, with: newViewController)
+            self?.loadData()
         }
     }
     
     func replace(viewController: UIViewController, with newViewController: UIViewController) {
+        self.setupActions(for: newViewController)
+        self.setupReporting(for: newViewController)
+
         viewController.willMove(toParentViewController: nil)
         addChildViewController(newViewController)
         newViewController.view.alpha = 0
@@ -82,7 +87,7 @@ extension HomeContainerViewController {
                     newViewController.view.alpha = 1.0
                     viewController.view.alpha = 0.0
         },
-                   completion: { finished in
+                   completion: { [weak self] finished in
                     viewController.removeFromParentViewController()
                     newViewController.didMove(toParentViewController: self)
         })

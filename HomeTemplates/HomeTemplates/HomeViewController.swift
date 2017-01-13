@@ -44,5 +44,10 @@ class HomeViewController: UIViewController, HomeActions, HasViewModel, HomeRepor
         longSelected?(item)
     }
     
+    @IBAction func changeUiButtonTapped() {
+        guard let newViewController = HomeFactory.create(withStyle: 3) else { return }
+        /* we can do here any required setup i.e. inform what item should be displayed */
+        replaceWith?(newViewController)
+    }
 }
 
