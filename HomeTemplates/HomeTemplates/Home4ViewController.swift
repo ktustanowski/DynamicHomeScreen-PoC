@@ -8,19 +8,34 @@
 
 import Foundation
 
-class Home4ViewController: UITableViewController, HasViewModel, HomeActions, Refreshable {
+class Home4ViewController: UITableViewController, HasViewModel, HomeActions, Refreshable, HomeReporting {
     
+    var didHorizontalSwipe: (()->())?
+    var didLaunch: (()->())?
+
+    var baseViewModel: BaseHomeViewModel? = Home4ViewModel()
+
     var longSelected: ((_ identifier: HomeItem)->())?
     var shortSelected: ((_ identifier: HomeItem)->())?
     var streamSelected: ((_ identifier: HomeItem)->())?
+    var replaceWith: ((UIViewController) -> ())?
     var settingsSelected: (()->())?
-    
-    var baseViewModel: BaseHomeViewModel? = Home4ViewModel()
     
     var viewModel: Home4ViewModel? {
         return baseViewModel as? Home4ViewModel
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        didLaunch?()
+    }
+    
+    @IBAction func changeUiButtonTapped() {
+        guard let newViewController = HomeFactory.create(withStyle: 1) else { return }
+        /* we can do here any required setup i.e. inform what item should be displayed */
+        replaceWith?(newViewController)
+    }
 }
 
 extension Home4ViewController {

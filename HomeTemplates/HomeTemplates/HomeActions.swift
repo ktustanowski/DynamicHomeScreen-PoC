@@ -13,6 +13,7 @@ public protocol HomeActions: class {
     var longSelected: ((_ identifier: HomeItem)->())? { get set }
     var shortSelected: ((_ identifier: HomeItem)->())? { get set }
     var streamSelected: ((_ identifier: HomeItem)->())? { get set }
+    var replaceWith: ((_ viewController: UIViewController)->())? { get set }
     var settingsSelected: (()->())? { get set }
 
 }

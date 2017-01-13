@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A3DE3F91E27CA7500810C80 /* HomeItemStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE3F81E27CA7500810C80 /* HomeItemStruct.swift */; };
 		9A3DE3FB1E27CBC800810C80 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE3FA1E27CBC800810C80 /* Refreshable.swift */; };
+		9A3DE4011E28F19000810C80 /* HomeReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE4001E28F19000810C80 /* HomeReporting.swift */; };
 		9AFF4F071E27A74300C21AAB /* HomeTemplates.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AFF4F051E27A74300C21AAB /* HomeTemplates.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AFF4F1D1E27A7F600C21AAB /* Home2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4F151E27A7F600C21AAB /* Home2ViewController.storyboard */; };
 		9AFF4F1E1E27A7F600C21AAB /* Home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4F161E27A7F600C21AAB /* Home2ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		9A3DE3F81E27CA7500810C80 /* HomeItemStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemStruct.swift; sourceTree = "<group>"; };
 		9A3DE3FA1E27CBC800810C80 /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		9A3DE4001E28F19000810C80 /* HomeReporting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeReporting.swift; sourceTree = "<group>"; };
 		9AFF4F021E27A74300C21AAB /* HomeTemplates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HomeTemplates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFF4F051E27A74300C21AAB /* HomeTemplates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTemplates.h; sourceTree = "<group>"; };
 		9AFF4F061E27A74300C21AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		9AFF4F041E27A74300C21AAB /* HomeTemplates */ = {
 			isa = PBXGroup;
 			children = (
+				9A3DE4001E28F19000810C80 /* HomeReporting.swift */,
 				9A3DE3FA1E27CBC800810C80 /* Refreshable.swift */,
 				9AFF4F191E27A7F600C21AAB /* HomeActions.swift */,
 				9AFF4F351E27B0B900C21AAB /* HasViewModel.swift */,
@@ -204,6 +207,7 @@
 				9AFF4F361E27B0B900C21AAB /* HasViewModel.swift in Sources */,
 				9AFF4F2B1E27AB5000C21AAB /* Home4ViewController.swift in Sources */,
 				9AFF4F211E27A7F700C21AAB /* HomeActions.swift in Sources */,
+				9A3DE4011E28F19000810C80 /* HomeReporting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

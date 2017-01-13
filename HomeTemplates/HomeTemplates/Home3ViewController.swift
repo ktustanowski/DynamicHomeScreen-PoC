@@ -8,13 +8,17 @@
 
 import UIKit
 
-class Home3ViewController: UIViewController, HomeActions, HasViewModel {
+class Home3ViewController: UIViewController, HomeActions, HasViewModel, HomeReporting {
+    
+    var didHorizontalSwipe: (()->())?
+    var didLaunch: (()->())?
     
     var baseViewModel: BaseHomeViewModel? = BaseHomeViewModel()
     
     var longSelected: ((_ identifier: HomeItem)->())?
     var shortSelected: ((_ identifier: HomeItem)->())?
     var streamSelected: ((_ identifier: HomeItem)->())?
+    var replaceWith: ((UIViewController) -> ())?
     var settingsSelected: (()->())?
 
     var test: (()->())?
@@ -23,6 +27,7 @@ class Home3ViewController: UIViewController, HomeActions, HasViewModel {
         super.viewDidLoad()
         
         parent?.title = "Home 3"
+        didLaunch?()
     }
     
     @IBAction func settingsButtonTapped() {

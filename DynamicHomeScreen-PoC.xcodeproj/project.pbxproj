@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A3DE3FD1E27D03E00810C80 /* HasContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE3FC1E27D03E00810C80 /* HasContent.swift */; };
+		9A3DE4031E28F67D00810C80 /* UIViewController+Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE4021E28F67D00810C80 /* UIViewController+Embedding.swift */; };
 		9AFF4EB61E251D6200C21AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */; };
 		9AFF4EBB1E251D6200C21AAB /* SeparateViewControllers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EB91E251D6200C21AAB /* SeparateViewControllers.storyboard */; };
 		9AFF4EBD1E251D6200C21AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EBC1E251D6200C21AAB /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		9A3DE3FC1E27D03E00810C80 /* HasContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasContent.swift; sourceTree = "<group>"; };
+		9A3DE4021E28F67D00810C80 /* UIViewController+Embedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embedding.swift"; sourceTree = "<group>"; };
 		9AFF4EB21E251D6200C21AAB /* DynamicHomeScreen-PoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DynamicHomeScreen-PoC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AFF4EBA1E251D6200C21AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SeparateViewControllers.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9AFF4EF41E27778E00C21AAB /* ContentProvider.swift */,
 				9AFF4EF61E278F1B00C21AAB /* Content.swift */,
 				9A3DE3FC1E27D03E00810C80 /* HasContent.swift */,
+				9A3DE4021E28F67D00810C80 /* UIViewController+Embedding.swift */,
 			);
 			path = "DynamicHomeScreen-PoC";
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				9AFF4EDD1E2653A000C21AAB /* HomeContainerViewController.swift in Sources */,
 				9A3DE3FD1E27D03E00810C80 /* HasContent.swift in Sources */,
 				9AFF4ECA1E251E9900C21AAB /* ShortContentViewController.swift in Sources */,
+				9A3DE4031E28F67D00810C80 /* UIViewController+Embedding.swift in Sources */,
 				9AFF4EE51E26637700C21AAB /* SettingsProvider.swift in Sources */,
 				9AFF4EEF1E26723500C21AAB /* StreamViewController.swift in Sources */,
 				9AFF4EC81E251E7400C21AAB /* SettingsViewController.swift in Sources */,

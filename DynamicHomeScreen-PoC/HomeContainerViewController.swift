@@ -30,42 +30,85 @@ class HomeContainerViewController: UIViewController {
             let viewController = HomeFactory.create(withStyle: SettingsProvider.homeStyle)
             else { return }
         
-        addChildViewController(viewController)
-        viewController.view.frame = view.frame
-        view.addSubview(viewController.view)
-        viewController.didMove(toParentViewController: self)
+        setupActions(for: viewController)
+        setupReporting(for: viewController)
         
-        if let homeViewController = viewController as? HomeActions {
-            homeViewController.settingsSelected = { [weak self] in
-                self?.performSegue(withIdentifier: SegueIdentifier.homeToSettings.rawValue, sender: self)
-            }
+        embed(viewController)
+    }
+    
+    @IBAction func refreshButtonTapped() {
+        loadData()
+    }
+}
 
-            homeViewController.longSelected = { [weak self] item in
-                self?.performSegue(withIdentifier: SegueIdentifier.homeToLong.rawValue, sender: item)
-            }
-
-            homeViewController.shortSelected = { [weak self] item in
-                self?.performSegue(withIdentifier: SegueIdentifier.homeToShort.rawValue, sender: item)
-            }
-
-            homeViewController.streamSelected = { [weak self] item in
-                self?.performSegue(withIdentifier: SegueIdentifier.homeToStream.rawValue, sender: item)
-            }
+//MARK: Actions
+extension HomeContainerViewController {
+    
+    func setupActions(for viewController: UIViewController) {
+        guard let actionViewController = viewController as? HomeActions else { return }
+        
+        actionViewController.settingsSelected = { [weak self] in
+            self?.performSegue(withIdentifier: SegueIdentifier.homeToSettings.rawValue, sender: self)
+        }
+        
+        actionViewController.longSelected = { [weak self] item in
+            self?.performSegue(withIdentifier: SegueIdentifier.homeToLong.rawValue, sender: item)
+        }
+        
+        actionViewController.shortSelected = { [weak self] item in
+            self?.performSegue(withIdentifier: SegueIdentifier.homeToShort.rawValue, sender: item)
+        }
+        
+        actionViewController.streamSelected = { [weak self] item in
+            self?.performSegue(withIdentifier: SegueIdentifier.homeToStream.rawValue, sender: item)
+        }
+        
+        actionViewController.replaceWith = { [weak self] newViewController in
+            guard let viewController = self?.childViewControllers.first else { return }
+            self?.replace(viewController: viewController, with: newViewController)
         }
     }
- 
-    func loadData() {
-        ContentProvider.loadContent { [weak self] contents in
-            guard
-                let contents = contents,
-                let viewControllerWithViewModel = self?.childViewControllers.first as? HasViewModel,
-                let refreshableViewController = self?.childViewControllers.first as? Refreshable
-                else { return }
-            
-                viewControllerWithViewModel.baseViewModel?.items = contents.map({ $0 as HomeItem })
-                refreshableViewController.refresh()
+    
+    func replace(viewController: UIViewController, with newViewController: UIViewController) {
+        viewController.willMove(toParentViewController: nil)
+        addChildViewController(newViewController)
+        newViewController.view.alpha = 0
+        
+        transition(from: viewController,
+                   to: newViewController,
+                   duration: 1.0,
+                   options: UIViewAnimationOptions.curveLinear,
+                   animations: {
+                    newViewController.view.alpha = 1.0
+                    viewController.view.alpha = 0.0
+        },
+                   completion: { finished in
+                    viewController.removeFromParentViewController()
+                    newViewController.didMove(toParentViewController: self)
+        })
+    }
+    
+}
+
+//MARK: Reporting
+extension HomeContainerViewController {
+    
+    func setupReporting(for viewController: UIViewController) {
+        guard let reportingViewController = viewController as? HomeReporting else { return }
+        
+        reportingViewController.didLaunch = {
+            print("Report: Did Launch")
+        }
+        
+        reportingViewController.didHorizontalSwipe = {
+            print("Report: Did Horizontal Swipe")
         }
     }
+    
+}
+
+//MARK: Navigation
+extension HomeContainerViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier != SegueIdentifier.homeToSettings.rawValue else { return }
@@ -75,10 +118,21 @@ class HomeContainerViewController: UIViewController {
             destination.content = content
         }
     }
-    
-    @IBAction func refreshButtonTapped() {
-        loadData()
-    }
-    
 }
 
+//MARK: Data loading
+extension HomeContainerViewController {
+    
+    func loadData() {
+        ContentProvider.loadContent { [weak self] contents in
+            guard
+                let contents = contents,
+                let viewControllerWithViewModel = self?.childViewControllers.first as? HasViewModel,
+                let refreshableViewController = self?.childViewControllers.first as? Refreshable
+                else { return }
+            
+            viewControllerWithViewModel.baseViewModel?.items = contents.map({ $0 as HomeItem })
+            refreshableViewController.refresh()
+        }
+    }
+}
