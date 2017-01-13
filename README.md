@@ -1,3 +1,3 @@
 # DynamicHomeScreen-PoC
 
-This sample application contains very simple implementation Feature Toggle support. More information about this approach can be found here -> https://github.com/ktustanowski/feature-toggle-proof-of-concept.
+This sample application contains very simple Feature Toggle support. More detailed information on this approach to toggles can be found here -> https://github.com/ktustanowski/feature-toggle-proof-of-concept.
