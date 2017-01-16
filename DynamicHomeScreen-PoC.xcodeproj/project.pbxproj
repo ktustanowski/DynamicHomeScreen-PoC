@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9A3DE3FD1E27D03E00810C80 /* HasContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE3FC1E27D03E00810C80 /* HasContent.swift */; };
 		9A3DE4031E28F67D00810C80 /* UIViewController+Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DE4021E28F67D00810C80 /* UIViewController+Embedding.swift */; };
+		9A9337981E292BBB00325888 /* ToggleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9337971E292BBB00325888 /* ToggleRouter.swift */; };
+		9A93379A1E292D6300325888 /* FeatureDecisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9337991E292D6300325888 /* FeatureDecisions.swift */; };
+		9A93379C1E292F0E00325888 /* FeatureTogglableDecorator+Home4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93379B1E292F0E00325888 /* FeatureTogglableDecorator+Home4.swift */; };
 		9AFF4EB61E251D6200C21AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */; };
 		9AFF4EBB1E251D6200C21AAB /* SeparateViewControllers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EB91E251D6200C21AAB /* SeparateViewControllers.storyboard */; };
 		9AFF4EBD1E251D6200C21AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF4EBC1E251D6200C21AAB /* Assets.xcassets */; };
@@ -61,6 +64,9 @@
 /* Begin PBXFileReference section */
 		9A3DE3FC1E27D03E00810C80 /* HasContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasContent.swift; sourceTree = "<group>"; };
 		9A3DE4021E28F67D00810C80 /* UIViewController+Embedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embedding.swift"; sourceTree = "<group>"; };
+		9A9337971E292BBB00325888 /* ToggleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleRouter.swift; sourceTree = "<group>"; };
+		9A9337991E292D6300325888 /* FeatureDecisions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureDecisions.swift; sourceTree = "<group>"; };
+		9A93379B1E292F0E00325888 /* FeatureTogglableDecorator+Home4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FeatureTogglableDecorator+Home4.swift"; sourceTree = "<group>"; };
 		9AFF4EB21E251D6200C21AAB /* DynamicHomeScreen-PoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DynamicHomeScreen-PoC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AFF4EBA1E251D6200C21AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SeparateViewControllers.storyboard; sourceTree = "<group>"; };
@@ -92,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A9337961E292BA400325888 /* FeatureToggling */ = {
+			isa = PBXGroup;
+			children = (
+				9A9337971E292BBB00325888 /* ToggleRouter.swift */,
+				9A9337991E292D6300325888 /* FeatureDecisions.swift */,
+				9A93379B1E292F0E00325888 /* FeatureTogglableDecorator+Home4.swift */,
+			);
+			name = FeatureToggling;
+			sourceTree = "<group>";
+		};
 		9AFF4EA91E251D6200C21AAB = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +128,9 @@
 		9AFF4EB41E251D6200C21AAB /* DynamicHomeScreen-PoC */ = {
 			isa = PBXGroup;
 			children = (
+				9A9337961E292BA400325888 /* FeatureToggling */,
 				9AFF4EB51E251D6200C21AAB /* AppDelegate.swift */,
 				9AFF4EDC1E2653A000C21AAB /* HomeContainerViewController.swift */,
-				9AFF4ED91E26442D00C21AAB /* HomeTemplates */,
 				9AFF4ED81E26441F00C21AAB /* Storyboards */,
 				9AFF4EBC1E251D6200C21AAB /* Assets.xcassets */,
 				9AFF4EBE1E251D6200C21AAB /* LaunchScreen.storyboard */,
@@ -140,13 +156,6 @@
 				9AFF4EB91E251D6200C21AAB /* SeparateViewControllers.storyboard */,
 			);
 			name = Storyboards;
-			sourceTree = "<group>";
-		};
-		9AFF4ED91E26442D00C21AAB /* HomeTemplates */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = HomeTemplates;
 			sourceTree = "<group>";
 		};
 		9AFF4F101E27A79600C21AAB /* Products */ = {
@@ -248,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A93379A1E292D6300325888 /* FeatureDecisions.swift in Sources */,
 				9AFF4ECC1E251EA600C21AAB /* LongContentViewController.swift in Sources */,
 				9AFF4EF71E278F1B00C21AAB /* Content.swift in Sources */,
 				9AFF4EF51E27778E00C21AAB /* ContentProvider.swift in Sources */,
@@ -256,10 +266,12 @@
 				9AFF4EDD1E2653A000C21AAB /* HomeContainerViewController.swift in Sources */,
 				9A3DE3FD1E27D03E00810C80 /* HasContent.swift in Sources */,
 				9AFF4ECA1E251E9900C21AAB /* ShortContentViewController.swift in Sources */,
+				9A9337981E292BBB00325888 /* ToggleRouter.swift in Sources */,
 				9A3DE4031E28F67D00810C80 /* UIViewController+Embedding.swift in Sources */,
 				9AFF4EE51E26637700C21AAB /* SettingsProvider.swift in Sources */,
 				9AFF4EEF1E26723500C21AAB /* StreamViewController.swift in Sources */,
 				9AFF4EC81E251E7400C21AAB /* SettingsViewController.swift in Sources */,
+				9A93379C1E292F0E00325888 /* FeatureTogglableDecorator+Home4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
