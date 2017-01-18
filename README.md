@@ -24,7 +24,7 @@ Proposed solution is based on child View Controller embedding. The idea: create 
 Example:
 
 Child View Controller implements HomeActions protocol, which gathers all actions that can be made on Home screen. 
-```
+```swift
 public protocol HomeActions: class {    
     var longSelected: ((_ identifier: HomeItem)->())? { get set }
     var shortSelected: ((_ identifier: HomeItem)->())? { get set }
@@ -35,7 +35,7 @@ public protocol HomeActions: class {
 ```
 Layouts and visuals may change radically between View Controllers but they always know what actions mean what. Then in View Controllers we call this closures when needed:
 
-```
+```swift
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let selectedItem = viewModel?.items?[indexPath.row] else { return }
         
@@ -44,7 +44,7 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
 ```
 
 In this View Controller tapping on a cell means that long content was selected. In another long content may be requested by tapping on item in collection view etc. This View Controllers know how to translate actions to correct closures, its their responsibility, but they don't know what will happen next. Container View Controller is aware of its surroundings and expectations thats why its injecting correct behaviors right on the start:
-```
+```swift
 guard let actionViewController = viewController as? HomeActions else { return }
 
 actionViewController.longSelected = { [weak self] item in
