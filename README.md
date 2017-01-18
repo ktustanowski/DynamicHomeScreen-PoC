@@ -11,7 +11,7 @@ Use cases:
 - use different View Controller based on Feature Toggling or configuration
 - easy multiple View Controller support
 
-##Solution overview
+##Overview
 The simplest solution is to have multiple View Controllers and just add them to the storyboard and in runtime choose which one to be used using segues, but:
 - all segues have to be added for every View Controller
 - needs shared Storyboard updates when adding new View Controller
