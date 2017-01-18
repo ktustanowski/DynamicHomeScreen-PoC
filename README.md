@@ -19,7 +19,7 @@ The simplest solution is to have multiple View Controllers and just add them to 
 - many steps to remember when adding new View Controller
 - harder to move to framework
 
-Proposed solution is based on child View Controller embedding. The idea: create Container View Controller in the application which is used in storyboards for navigation and in the framework maintain only child View Controllers which then be embedded into this Container View Controller. Container View Controller injects behavior directly to Child View Controllers so they don't know what is going on when user taps on a button. They just invoke behavior received from parent.
+Proposed solution is based on Child View Controller embedding. The idea: create Container View Controller in the application which is used in storyboards for navigation and in the framework maintain only Child View Controllers which then be embedded into this Container View Controller. Container View Controller injects behavior directly to Child View Controllers so they don't know what is going on when user taps on a button. They just invoke behavior received from parent.
 
 Example:
 
@@ -55,6 +55,100 @@ actionViewController.longSelected = { [weak self] item in
 Thanks to this approach Container View Controller can gather data for its children, decorate them with correct behaviors to handle user actions, analytics reporting etc. so they don't have to know about this logic at all. Yep - this is a bad parent who wants his children to be as dumb as possible 😱
 
 ![alt text](https://github.com/ktustanowski/DynamicHomeScreen-PoC/blob/master/embedded.navigation.png "Embedded navigation in Storybaord")
+
+##It's all about protocols
+Dumb children is one but this parent also doesn't want to know which child is which. He doesn't care whether he speaks to View Controller with table view or collection view. He shields children from outside world but doesn't want to know more than necessary about them. To achieve this we use protocols:
+**Home Actions** which is all about stuff that can be done on Home:
+```swift
+public protocol HomeActions: class {
+    var longSelected: ((_ identifier: HomeItem)->())? { get set }
+    var shortSelected: ((_ identifier: HomeItem)->())? { get set }
+    var streamSelected: ((_ identifier: HomeItem)->())? { get set }
+    var replaceWith: ((_ viewController: UIViewController)->())? { get set }
+    var settingsSelected: (()->())? { get set }
+}
+```
+Which in Container View controller is just about injecting behaviors:
+```swift
+guard let actionViewController = viewController as? HomeActions else { return }
+        
+actionViewController.settingsSelected = { [weak self] in
+    self?.performSegue(withIdentifier: SegueIdentifier.homeToSettings.rawValue, sender: self)
+}
+        
+actionViewController.longSelected = { [weak self] item in
+    self?.performSegue(withIdentifier: SegueIdentifier.homeToLong.rawValue, sender: item)
+}
+        
+actionViewController.shortSelected = { [weak self] item in
+    self?.performSegue(withIdentifier: SegueIdentifier.homeToShort.rawValue, sender: item)
+}
+        
+actionViewController.streamSelected = { [weak self] item in
+    self?.performSegue(withIdentifier: SegueIdentifier.homeToStream.rawValue, sender: item)
+}
+        
+actionViewController.replaceWith = { [weak self] newViewController in
+    guard let viewController = self?.childViewControllers.first else { return }
+
+    self?.replace(viewController: viewController, with: newViewController)
+    self?.loadData()
+}
+```
+**HomeReporting** which gathers all stuff used for reporting:
+```swift
+public protocol HomeReporting: class {
+    var didHorizontalSwipe: (()->())? { get set }
+    var didLaunch: (()->())? { get set }
+}
+```
+Which again is only about injecting behaviors:
+```swift
+guard let reportingViewController = viewController as? HomeReporting else { return }
+        
+reportingViewController.didLaunch = {
+    print("Report: Did Launch")
+}
+        
+reportingViewController.didHorizontalSwipe = {
+    print("Report: Did Horizontal Swipe")
+}
+```
+**HasViewModel** so parent can pass data to children:
+```swift
+public protocol HasViewModel: class {    
+    var baseViewModel: BaseHomeViewModel? { get }    
+}
+```
+**Refreshable** so parent can reload its child UI when new data is passed:
+```swift
+public protocol Refreshable {
+    func refresh()
+}
+
+```
+This time it's a bit different because we pass items to concrete Child View Controller view model and after this we refresh the UI:
+```swift
+ContentProvider.loadContent { [weak self] contents in
+    guard
+        let contents = contents,
+        let viewControllerWithViewModel = self?.childViewControllers.first as? HasViewModel,
+        let refreshableViewController = self?.childViewControllers.first as? Refreshable
+        else { return }
+            
+viewControllerWithViewModel.baseViewModel?.items = contents.map({ $0 as HomeItem })
+refreshableViewController.refresh()
+}
+```
+We could create the whole view model and set it to View Controller but then we would have to know what view model to create  because every child view controller has its own subclass of BaseHomeViewModel.
+
+Long story short -  Container View Controller uses 
+```swift
+public static func create(withStyle style: Int) -> UIViewController?
+```
+function of **HomeFactory** to get concrete Child View Controller as UIViewController and behaviors and data are injected for all protocols that child is implementing.
+
+##Data flow
 
 
 ##Feature Toggling (work in progress)
