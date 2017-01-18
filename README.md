@@ -157,12 +157,12 @@ public protocol HomeItem {
     var description: String? { get }
 }
 ```
-Thanks to this we only have to implement this protocol in regular application models to be able to use them in the process:
+Thanks to this we just have to implement this protocol in regular application models to be able to use them in the process:
 ```swift
 /* contents is application model struct */
 viewControllerWithViewModel.baseViewModel?.items = contents.map({ $0 as HomeItem })
 ```
-Whenever user make action that will be handled by the application and requires more context an item will be passed to the closure. This item will be the same application model that was passed in the beginning and wolud need only casting to unleash its full potential:
+Whenever user make action that will be handled by the application and requires more context an item will be passed to the closure. This item will be the same application model that was passed in the beginning and would only require casting to unleash its full potential:
 ```swift
 actionViewController.streamSelected = { [weak self] item in
     self?.performSegue(withIdentifier: SegueIdentifier.homeToStream.rawValue, sender: item)
@@ -171,13 +171,13 @@ actionViewController.streamSelected = { [weak self] item in
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard segue.identifier != SegueIdentifier.homeToSettings.rawValue else { return }
         
-    if let destination = segue.destination as? HasContent,
+    if let destination = segue.destination as? HasContent, /* HasContent protocol is part of the sample application, not the framework, and its just created for convnience. */
         let content = sender as? Content {
         destination.content = content
     }
 }
 ```
-HasContent protocol is part of the sample application, not the framework, and its just created for convnience.
+
 
 ##Feature Toggling (work in progress)
 This sample application contains very simple Feature Toggle support. More detailed information on this approach to toggles can be found here -> https://github.com/ktustanowski/feature-toggle-proof-of-concept.
