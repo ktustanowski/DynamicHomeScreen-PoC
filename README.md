@@ -33,7 +33,7 @@ public protocol HomeActions: class {
     var settingsSelected: (()->())? { get set }
 }
 ```
-Layouts and visuals may change radically between View Controllers but they always know what actions mean what. Then in View Controllers we call this closures when needed:
+Layouts and visuals may change radically between View Controllers but they always know what actions mean what and its their responsibility to call this closures when needed:
 
 ```swift
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -178,6 +178,52 @@ actionViewController.streamSelected = { [weak self] item in
 }
 ```
 
+##Handling View Controller switching
+Container View Controller just have to determine which View Controller to use and ask HomeFactory for it. But thats not all. In HomeActions protocol there is also one special action called replaceWith:
+```swift
+var replaceWith: ((_ viewController: UIViewController)->())? { get set }
+```
+Child View Controller can indicate that its time to change and will even serve new view controller that needs to be shown (because it knows what view controller it should switch to):
+```swift
+actionViewController.replaceWith = { [weak self] newViewController in
+    guard let viewController = self?.childViewControllers.first else { return }
+
+    self?.replace(viewController: viewController, with: newViewController)
+    self?.loadData()
+}
+```
+We can also animate this change without any problems:
+```swift
+func replace(viewController: UIViewController, with newViewController: UIViewController) {
+    self.setupActions(for: newViewController)
+    self.setupReporting(for: newViewController)
+
+    viewController.willMove(toParentViewController: nil)
+    addChildViewController(newViewController)
+    newViewController.view.alpha = 0
+        
+    transition(from: viewController,
+                 to: newViewController,
+           duration: 1.0,
+            options: UIViewAnimationOptions.curveLinear,
+         animations: {  
+            newViewController.view.alpha = 1.0
+            viewController.view.alpha = 0.0
+    },
+         completion: { [weak self] finished in  
+            viewController.removeFromParentViewController()
+            newViewController.didMove(toParentViewController: self)
+    })
+}
+```
+
+##Adding additional Child View Controllers
+- create ChildViewController class and implement all required protocols
+- create storyboard file and setup visuals in storyboard and in class
+- call closures from protocols in appropriate places
+- update HomeFactory to be able to return this new view controller when asked (if needed - in the sample app its all about the indexes so if new view controller is named correctly it will just work)
 
 ##Feature Toggling (work in progress)
 This sample application contains very simple Feature Toggle support. More detailed information on this approach to toggles can be found here -> https://github.com/ktustanowski/feature-toggle-proof-of-concept.
+
+##Build view controller with components (didn't start yet)
