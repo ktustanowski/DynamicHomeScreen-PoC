@@ -167,7 +167,9 @@ Whenever user make action that will be handled by the application and requires m
 actionViewController.streamSelected = { [weak self] item in
     self?.performSegue(withIdentifier: SegueIdentifier.homeToStream.rawValue, sender: item)
 }
+
 [...]
+
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard segue.identifier != SegueIdentifier.homeToSettings.rawValue else { return }
         
