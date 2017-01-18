@@ -159,7 +159,7 @@ public protocol HomeItem {
 ```
 Thanks to this we just have to implement this protocol in regular application models to be able to use them in the process:
 ```swift
-/* contents is application model struct */
+/* contents is array of application model structs */
 viewControllerWithViewModel.baseViewModel?.items = contents.map({ $0 as HomeItem })
 ```
 Whenever user make action that will be handled by the application and requires more context an item will be passed to the closure. This item will be the same application model that was passed in the beginning and would only require casting to unleash its full potential:
