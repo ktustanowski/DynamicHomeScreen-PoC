@@ -52,7 +52,7 @@ actionViewController.longSelected = { [weak self] item in
 }
 ```
 
-Thanks to this approach Container view controller can gather data for its children, decorate them with correct behaviors to handle user actions, analytics reporting etc. so they don't have to know about this logic at all. Yep - this is a bad parent who wants his children to be as dumb as possible 😱
+Thanks to this approach Container view controller can gather data for its children, decorate them with correct behaviors to handle user actions, analytics reporting etc. so they don't have to know about this logic at all. Yep - this is a bad parent who wants its children to be as dumb as possible 😱
 
 ![alt text](https://github.com/ktustanowski/DynamicHomeScreen-PoC/blob/master/embedded.navigation.png "Embedded navigation in Storybaord")
 
