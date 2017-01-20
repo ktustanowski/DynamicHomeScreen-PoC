@@ -225,7 +225,7 @@ func replace(viewController: UIViewController, with newViewController: UIViewCon
 - call closures from protocols in appropriate places
 - update HomeFactory to be able to return this new view controller when asked (if needed - in the sample app its all about the indexes so if new view controller is named correctly it will just work)
 
-##Feature Toggling (work in progress)
+##Feature Toggling
 This sample application contains very simple Feature Toggle support. More detailed information can be found here -> https://github.com/ktustanowski/feature-toggle-proof-of-concept.
 
 Feature toggling template view controllers will be done inside of HomeTemplates framework. Thanks to this we won't have to drag templates to the application, don't have to make everything public, all template view controller related stuff will be encapsulated. To achieve this however we have to move feature toggling (ToggleRouter, FeatureDecissions etc.) stuff into its own framework.
