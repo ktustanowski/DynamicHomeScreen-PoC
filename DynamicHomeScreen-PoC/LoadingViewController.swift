@@ -7,22 +7,23 @@
 //
 
 import UIKit
+import FeatureToggleSupport
 
 class LoadingViewController: UIViewController {
     
-    @IBOutlet weak var homeStyleSegmentedControl: UISegmentedControl!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        homeStyleSegmentedControl.addTarget(self, action: #selector(homeStyleChanged), for: .valueChanged)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             self?.performSegue(withIdentifier: "LoadingToEmbededHome", sender: nil)
         }
     }
+
+    @IBAction func awesomeFaetureStateChanged(_ sender: UISwitch) {
+        ToggleRouter.awesomeFeature = sender.isOn
+    }
     
-    func homeStyleChanged() {
-        SettingsProvider.homeStyle = homeStyleSegmentedControl.selectedSegmentIndex
+    @IBAction func homeStyleChanged(_ sender: UISegmentedControl) {
+        SettingsProvider.homeStyle = sender.selectedSegmentIndex
     }
 }

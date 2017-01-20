@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct ToggleRouter {
+public struct ToggleRouter {
     
-    static var awesomeFeature = false
+    public static var awesomeFeature = false
     
 }

@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import FeatureToggleSupport
 
-class Home4ViewController: UITableViewController, HasViewModel, HomeActions, Refreshable, HomeReporting {
+class Home4ViewController: UITableViewController, HasViewModel, HomeActions, Refreshable, HomeReporting, FeatureTogglable {
+    
+    var decorate: (() -> ())?
     
     var didHorizontalSwipe: (()->())?
     var didLaunch: (()->())?
@@ -21,6 +24,8 @@ class Home4ViewController: UITableViewController, HasViewModel, HomeActions, Ref
     var replaceWith: ((UIViewController) -> ())?
     var settingsSelected: (()->())?
     
+    var decorateCell: ((UITableViewCell)->())?
+    
     var viewModel: Home4ViewModel? {
         return baseViewModel as? Home4ViewModel
     }
@@ -28,7 +33,10 @@ class Home4ViewController: UITableViewController, HasViewModel, HomeActions, Ref
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        FeatureTogglableDecorator.decorate(object: self)
+        
         parent?.title = "Home 4"
+        decorate?()
         didLaunch?()
     }
 
@@ -48,6 +56,7 @@ extension Home4ViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCellIdentifier", for: indexPath)
         
+        decorateCell?(cell)
         cell.textLabel?.text = viewModel?.cellViewModels[indexPath.row].title /* No cell vm implementation in sample app yet */
         
         return cell

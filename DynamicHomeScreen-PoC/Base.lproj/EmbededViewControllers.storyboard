@@ -57,6 +57,9 @@
                                     <segment title="4"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="homeStyleChanged:" destination="gse-hq-5WV" eventType="valueChanged" id="ydF-ds-izB"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3R-da-e1A">
                                 <rect key="frame" x="143" y="173" width="89" height="21"/>
@@ -64,6 +67,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Awesome feature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amt-kU-Y2r">
+                                <rect key="frame" x="92" y="139" width="133" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="huf-3O-PUK">
+                                <rect key="frame" x="233" y="134" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="awesomeFaetureStateChanged:" destination="gse-hq-5WV" eventType="valueChanged" id="0O6-iE-bwI"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -76,7 +93,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="homeStyleSegmentedControl" destination="IbW-vf-rz6" id="FX2-dj-woI"/>
                         <segue destination="uL1-qQ-t37" kind="presentation" identifier="LoadingToEmbededHome" modalTransitionStyle="crossDissolve" id="PgH-AP-SDY"/>
                     </connections>
                 </viewController>

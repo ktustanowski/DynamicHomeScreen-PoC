@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct FeatureDecisions {
+public struct FeatureDecisions {
     
-    static var isAwesomeFeatureEnabled: Bool {
+    public static var isAwesomeFeatureEnabled: Bool {
         return ToggleRouter.awesomeFeature
     }
     

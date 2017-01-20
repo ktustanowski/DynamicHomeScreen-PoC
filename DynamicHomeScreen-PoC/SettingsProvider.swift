@@ -11,5 +11,6 @@ import Foundation
 struct SettingsProvider {
     
     static var homeStyle = 0
+    static var awesomeFeature = false
     
 }
