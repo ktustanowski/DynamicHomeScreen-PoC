@@ -229,5 +229,3 @@ func replace(viewController: UIViewController, with newViewController: UIViewCon
 This sample application contains very simple Feature Toggle support. More detailed information can be found here -> https://github.com/ktustanowski/feature-toggle-proof-of-concept.
 
 Feature toggling template view controllers will be done inside of HomeTemplates framework. Thanks to this we won't have to drag templates to the application, don't have to make everything public, all template view controller related stuff will be encapsulated. To achieve this however we have to move feature toggling (ToggleRouter, FeatureDecissions etc.) stuff into its own framework.
-
-##Build view controller with components (didn't start yet)
