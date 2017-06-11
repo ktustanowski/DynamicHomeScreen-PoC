@@ -11,7 +11,7 @@ Use cases:
 - use different view controller based on Feature Toggling or configuration
 - easy multiple view controller support
 
-##Overview
+## Overview
 The simplest solution is to have multiple view controllers and just add them to the storyboard and in runtime choose which one to be used using segues, but:
 - all segues have to be added for every view controller
 - needs shared Storyboard updates when adding new view controller
@@ -56,7 +56,7 @@ Thanks to this approach Container view controller can gather data for its childr
 
 ![alt text](https://github.com/ktustanowski/DynamicHomeScreen-PoC/blob/master/embedded.navigation.png "Embedded navigation in Storybaord")
 
-##It's all about protocols
+## It's all about protocols
 Dumb children is one but this parent also doesn't want to know which child is which. He doesn't care whether he speaks to view controller with table view or collection view. He shields children from outside world but doesn't want to know more than necessary about them. To achieve this we use protocols:
 **Home Actions** which is all about stuff that can be done on Home:
 ```swift
@@ -148,7 +148,7 @@ public static func create(withStyle style: Int) -> UIViewController?
 ```
 function of **HomeFactory** to get concrete child view controller as UIViewController and behaviors and data are injected for all protocols that child is implementing.
 
-##Data flow
+## Data flow
 In order to display data in child view controllers they have their own view models which require items that conform to **HomeItem** protocol:
 ```swift
 public protocol HomeItem {
@@ -180,7 +180,7 @@ actionViewController.streamSelected = { [weak self] item in
 }
 ```
 
-##Handling view controller switching
+## Handling view controller switching
 Container view controller just have to determine which view controller to use and ask HomeFactory for it. But thats not all. In HomeActions protocol there is also one special action called replaceWith:
 ```swift
 var replaceWith: ((_ viewController: UIViewController)->())? { get set }
@@ -219,13 +219,13 @@ func replace(viewController: UIViewController, with newViewController: UIViewCon
 }
 ```
 
-##Adding additional child view controllers
+## Adding additional child view controllers
 - create ChildViewController class and implement all required protocols
 - create storyboard file and setup visuals in storyboard and in class
 - call closures from protocols in appropriate places
 - update HomeFactory to be able to return this new view controller when asked (if needed - in the sample app its all about the indexes so if new view controller is named correctly it will just work)
 
-##Feature Toggling
+## Feature Toggling
 This sample application contains very simple Feature Toggle support. More detailed information can be found here -> https://github.com/ktustanowski/feature-toggle-proof-of-concept.
 
 Feature toggling template view controllers will be done inside of HomeTemplates framework. Thanks to this we won't have to drag templates to the application, don't have to make everything public, all template view controller related stuff will be encapsulated. To achieve this however we have to move feature toggling (ToggleRouter, FeatureDecissions etc.) stuff into its own framework.
