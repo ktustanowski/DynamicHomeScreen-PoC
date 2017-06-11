@@ -225,6 +225,9 @@ func replace(viewController: UIViewController, with newViewController: UIViewCon
 - call closures from protocols in appropriate places
 - update HomeFactory to be able to return this new view controller when asked (if needed - in the sample app its all about the indexes so if new view controller is named correctly it will just work)
 
+## Important Note
+While implementing in real application I changed a bit concept of communication using closures. Passing HomeItem kind of broke MVVM because it was exposing model to ViewController. So instead I just use `IndexPath`s. Just remember that different temlates can use different item ordering.
+
 ## Feature Toggling
 This sample application contains very simple Feature Toggle support. More detailed information can be found here -> https://github.com/ktustanowski/feature-toggle-proof-of-concept.
 
